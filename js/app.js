@@ -20,14 +20,8 @@ document.querySelector('.home__content__dots').addEventListener('click', () => {
     behavior: 'smooth'
   })
 })
-const getScrollValue = () => st < this.pageYOffset ? (st = this.pageYOffset, !1) : (st = this.pageYOffset, !0),
-  parallaxAbout = () => {
-    getScrollValue() ? aboutItemsTop -= 2.5 : aboutItemsTop += 2.5, aboutItems.forEach(e => {
-      e.style.top = aboutItemsTop + "px"
-    })
-  };
 window.addEventListener("scroll", () => {
-  this.pageYOffset > homeSec.offsetHeight - 100 ? header.className = "header black" : header.className = "header", this.pageYOffset + this.innerHeight > homeSec.offsetHeight + 200 && this.pageYOffset + this.innerHeight < homeSec.offsetHeight + document.querySelector(".about").offsetHeight ? document.querySelector(".about__bg").className = "about__bg fixed" : document.querySelector(".about__bg").className = "about__bg", this.pageYOffset + this.innerHeight > homeSec.offsetHeight + 200 && this.pageYOffset + this.innerHeight < homeSec.offsetHeight + document.querySelector(".about").offsetHeight - 200 && parallaxAbout()
+  this.pageYOffset > homeSec.offsetHeight - 100 ? header.className = "header black" : header.className = "header", this.pageYOffset + this.innerHeight > homeSec.offsetHeight + 200 && this.pageYOffset + this.innerHeight < homeSec.offsetHeight + document.querySelector(".about").offsetHeight ? document.querySelector(".about__bg").className = "about__bg fixed" : document.querySelector(".about__bg").className = "about__bg"
 });
 let parallaxItems = document.querySelectorAll(".title h2, h1");
 window.addEventListener("mousemove", function (e) {
